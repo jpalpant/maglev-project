@@ -1,0 +1,23 @@
+Real-Time Interface project marker file.
+
+BuildDir:           yes
+Model:              FinalSimulink
+TMF:                C:\dSPACE\matlab\rti1104\m\rti1104.tmf
+MATLAB:             7.11.1.866 (R2010b) Service Pack 1
+Simulink:           Simulink 7.6.1 (R2010bSP1) 28-Jan-2011
+SimStruct:          21-Jun-2010 17:43:28
+RTW:                Real-Time Workshop 7.6.1 (R2010bSP1) 28-Jan-2011
+RTI:                RTI1104 6.6 (29-Nov-2010)
+RTI-MP:             n.a.
+RTICAN:             n.a.
+RTICANMM:           n.a.
+RTI4301:            n.a.
+RTILIN:             n.a.
+RTILINMM:           n.a.
+RTIBYPASS1:         n.a.
+RTIBYPASS:          n.a.
+RTIFLEXRAY:         n.a.
+RTIFLEXRAYCONFIG:   n.a.
+RTIRPCU:            n.a.
+MDBS:               n.a.
+TALIB:              n.a.

@@ -1,0 +1,7 @@
+* source PWMTOANALOGCONVERTER
+C_C1         N00698 0  10u  TC=0,0 
+R_R1         N00505 N00698  3.9k TC=0,0 
+V_V1         N00505 0  
++PULSE 0 5 0 100ns 100ns 1ms 2ms
+R_R2         N00505 N03060  3.9k TC=0,0 
+C_C2         N03060 0  1u  TC=0,0 

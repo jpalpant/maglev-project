@@ -1,0 +1,485 @@
+-- ******** Model variables ***************************************************
+
+group "Model Root"
+{
+ flags: COLLAPSED
+}
+	group "SensorVoltage" -- block-group
+	{
+	 block: "Outport"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FinalSimulink_Y_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "In1"
+		 desc:    ""
+		 flags:   SINK|READONLY
+		}
+
+
+
+	endgroup -- block-group "SensorVoltage"
+
+	group "VoltageToMaglev" -- block-group
+	{
+	 block: "Outport"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FinalSimulink_B_real_T_0[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "In1"
+		 desc:    ""
+		 flags:   SINK|READONLY
+		}
+
+
+
+	endgroup -- block-group "VoltageToMaglev"
+
+	group "RealSet" -- block-group
+	{
+	 block: "Outport"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FinalSimulink_Y_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "In1"
+		 desc:    ""
+		 flags:   SINK|READONLY
+		}
+
+
+
+	endgroup -- block-group "RealSet"
+
+	group "Changing Set Point" -- block-group
+	{
+	 block: "Stateflow"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FinalSimulink_B_real_T_0[5]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "n"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Changing Set Point"
+
+	group "Changing Set Point1" -- block-group
+	{
+	 block: "Stateflow"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output n
+
+
+	endgroup -- block-group "Changing Set Point1"
+
+	group "Sine Wave" -- block-group
+	{
+	 block: "Stateflow"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output N
+
+
+	endgroup -- block-group "Sine Wave"
+
+	group "Bias" -- block-group
+	{
+	 block: "Bias"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FinalSimulink_B_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+		p_FinalSimulink_P_real_T_0[6]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Bias"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Bias"
+
+	group "Clock" -- block-group
+	{
+	 block: "Clock"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FinalSimulink_B_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Clock"
+
+	group "Pulse Amplitude" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FinalSimulink_P_real_T_0[5]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Pulse Amplitude"
+
+	group "Pulse Frequency" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FinalSimulink_P_real_T_0[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Pulse Frequency"
+
+	group "Set Point" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FinalSimulink_P_real_T_0[3]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Set Point"
+
+	group "Sine Amplitude" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FinalSimulink_P_real_T_0[2]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Sine Amplitude"
+
+	group "Sine Frequency" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FinalSimulink_P_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Sine Frequency"
+
+	group "Switch" -- block-group
+	{
+	 block: "Constant"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FinalSimulink_P_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Value"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Switch"
+
+	group "Gain" -- block-group
+	{
+	 block: "Gain"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+		p_FinalSimulink_P_real_T_0[13]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Gain"
+		 flags:   PARAM
+		}
+
+
+	endgroup -- block-group "Gain"
+
+	group "Multiport\nSwitch" -- block-group
+	{
+	 block: "MultiPortSwitch"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		-- Skipping output Out1
+
+
+	endgroup -- block-group "Multiport\nSwitch"
+
+	group "Sum2" -- block-group
+	{
+	 block: "Sum"
+	 desc:  ""
+	 flags: BLOCK|COLLAPSED
+	}
+		p_FinalSimulink_B_real_T_0[3]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+
+	endgroup -- block-group "Sum2"
+
+  
+  
+	group "DS1104ADC_C5" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_FinalSimulink_Y_real_T_0[0]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "ADC"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+	endgroup -- subsystem-group "DS1104ADC_C5"
+  
+  
+	group "DS1104ADC_C6" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_FinalSimulink_B_real_T_0[1]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "ADC"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+	endgroup -- subsystem-group "DS1104ADC_C6"
+  
+  
+	group "DS1104DAC_C1" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+	endgroup -- subsystem-group "DS1104DAC_C1"
+  
+  
+	group "PID Controller" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+		p_FinalSimulink_B_real_T_0[4]
+		{
+		 type:    flt(64,IEEE)*
+		 alias:   "Out1"
+		 desc:    ""
+		 flags:   OUTPUT|READONLY
+		}
+
+		group "In1" -- block-group
+		{
+		 block: "Inport"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FinalSimulink_B_real_T_0[3]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "In1"
+
+		group "deriv" -- block-group
+		{
+		 block: "Derivative"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+
+
+		endgroup -- block-group "deriv"
+
+		group "Kd" -- block-group
+		{
+		 block: "Gain"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_FinalSimulink_P_real_T_0[8]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Kd"
+
+		group "Ki" -- block-group
+		{
+		 block: "Gain"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_FinalSimulink_P_real_T_0[12]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Ki"
+
+		group "Kp" -- block-group
+		{
+		 block: "Gain"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_FinalSimulink_P_real_T_0[7]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Gain"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "Kp"
+
+		group "integr" -- block-group
+		{
+		 block: "Integrator"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			-- Skipping output Out1
+			p_FinalSimulink_P_real_T_0[9]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "InitialCondition"
+			 flags:   PARAM
+			}
+			p_FinalSimulink_P_real_T_0[10]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "UpperSaturationLimit"
+			 flags:   PARAM
+			}
+			p_FinalSimulink_P_real_T_0[11]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "LowerSaturationLimit"
+			 flags:   PARAM
+			}
+
+
+		endgroup -- block-group "integr"
+
+		group "Sum" -- block-group
+		{
+		 block: "Sum"
+		 desc:  ""
+		 flags: BLOCK|COLLAPSED
+		}
+			p_FinalSimulink_B_real_T_0[4]
+			{
+			 type:    flt(64,IEEE)*
+			 alias:   "Out1"
+			 desc:    ""
+			 flags:   OUTPUT|READONLY
+			}
+
+
+		endgroup -- block-group "Sum"
+
+
+
+	endgroup -- subsystem-group "PID Controller"
+  
+  
+	group "RTI Data" -- subsystem-group
+	{
+	 flags: COLLAPSED
+	 desc:  ""
+	}
+
+	endgroup -- subsystem-group "RTI Data"
+
+
+
+
+endgroup -- "Model Root"

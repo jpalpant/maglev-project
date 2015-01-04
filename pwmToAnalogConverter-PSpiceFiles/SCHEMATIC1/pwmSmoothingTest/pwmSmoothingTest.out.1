@@ -1,0 +1,49 @@
+
+**** 11/28/14 04:48:01 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-pwmSmoothingTest"  [ D:\DROPBOX\CLASSES\ME 344\Maglev lab - Group Files\pwmToAnalogConverter-PSpiceFiles\SCH
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "pwmSmoothingTest.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\Justin\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.1s 0 500ns 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PWMTOANALOGCONVERTER
+C_C1         N00698 0  1u  TC=0,0 
+R_R1         N00505 N00698  3.9k TC=0,0 
+V_V1         N00505 0  
++PULSE 0 5 0 100ns 100ns 1.2ms 2ms
+R_R2         N00505 N03060  10k TC=0,0 
+R_R3         N03060 N03184  10k TC=0,0 
+C_C2         N03060 N03184  10n  TC=0,0 
+E_U1         N03184 0 VALUE {LIMIT(V(N03060,N03250)*1E6,-15V,+15V)}
+
+**** RESUMING pwmSmoothingTest.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N03250.
+
+ERROR(ORPSIM-15142): Node N03250 is floating
+

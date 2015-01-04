@@ -1,0 +1,44 @@
+%implements "chartSource" "C"
+%function ChartConfig(block, system) void
+  %createrecord chartConfiguration { ...
+          executeAtInitialization  0 ...
+  }
+  %return chartConfiguration
+%endfunction
+%function ChartDataMap(block, system) void
+  %createrecord ChartDataElements {\
+    NumChartData   5 \
+    ChartDataDefaults {\
+      RecordType   "ChartData"\
+      Dimensions   []\
+      IsTestPoint  0\
+    }\
+    ChartData {\
+      Name         "ni"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "method"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "v4_state"\
+      SFName       ""\
+      Path         ""\
+    }\
+    ChartData {\
+      Name         "twister_state"\
+      SFName       ""\
+      Path         ""\
+      Dimensions   [625]\
+    }\
+    ChartData {\
+      Name         "twister_state_not_empty"\
+      SFName       ""\
+      Path         ""\
+    }\
+  }
+  %return ChartDataElements
+%endfunction
